@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app = "myApp">
 
 <head>
 	<meta charset="UTF-8">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.8/angular-route.js"></script>
+	<script src="app.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<title>madLibs</title>
 </head>
 
-<body>
+<body ng-controller="madLibs">
 
 <div class="container">
 	
@@ -35,19 +37,19 @@
 
 			<h3>Provide the following words:</h3>
 		
-			<div class="col-md-4" ng-init="femaleName='[female name]'; jobTitle='[job title]'; tedTask='[tedious task]'">
+			<div class="col-md-4">
 				<input type="text" name="femalename" value="female name" class="in-v5 text-center" ng-model="femaleName">
 				<input type="text" name="jobtitle" value="job title" class="in-v1 text-center" ng-model="jobTitle">
 				<input type="text" name="tedioustask" value="tedious task" class="in-v5 text-center" ng-model="tedTask">
 			</div>
 			
-			<div class="col-md-4" ng-init="dirTask='[dirty task]'; celebrity='[celebrity]'; uselessSkill='[useless skill]'">
+			<div class="col-md-4">
 				<input type="text" name="dirtytask" value="dirty task" class="in-v2 text-center" ng-model="dirTask">
 				<input type="text" name="celebrity" value="celebrity" class="in-v2 text-center" ng-model="celebrity">
 				<input type="text" name="uselessskill" value="useless skill" class="in-v3 text-center" ng-model="uselessSkill">
 			</div>
 			
-			<div class="col-md-4" ng-init="obnCelebrity='[obnoxious celebrity]'; number='[huge number]'; adjective='[adjective]'">
+			<div class="col-md-4">
 				<input type="text" name="obncelebrity" value="obnoxious celebrity" class="in-v5 text-center" ng-model="obnCelebrity">
 				<input type="text" name="hugenumber" value="huge number" class="in-v3 text-center" ng-model="number">
 				<input type="text" name="adjective" value="adjective" class="in-v1 text-center" ng-model="adjective">
