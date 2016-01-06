@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" ng-app>
+
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>madLibs</title>
+</head>
+
+<body>
+
+<div class="container">
+	
+	<!-- Smiley + Title -->
+
+	<div class="row header">	
+		
+		<div class="col-md-offset-2 col-md-2 text-center smiley">
+			<img src="img/smiley.png"> 
+		</div>
+
+		<div class="col-md-5 text-center logo">
+			<img src="img/logo.png">
+			<h1>Automate This!</h1>
+		</div>
+
+	</div>
+	
+	<!-- User Input -->
+
+	<div class="row">
+		<div class="col-md-offset-2 col-md-7 userinput">
+
+			<h3>Provide the following words:</h3>
+		
+			<div class="col-md-4" ng-init="femaleName='[female name]'; jobTitle='[job title]'; tedTask='[tedious task]'">
+				<input type="text" name="femalename" value="female name" class="in-v5 text-center" ng-model="femaleName">
+				<input type="text" name="jobtitle" value="job title" class="in-v1 text-center" ng-model="jobTitle">
+				<input type="text" name="tedioustask" value="tedious task" class="in-v5 text-center" ng-model="tedTask">
+			</div>
+			
+			<div class="col-md-4" ng-init="dirTask='[dirty task]'; celebrity='[celebrity]'; uselessSkill='[useless skill]'">
+				<input type="text" name="dirtytask" value="dirty task" class="in-v2 text-center" ng-model="dirTask">
+				<input type="text" name="celebrity" value="celebrity" class="in-v2 text-center" ng-model="celebrity">
+				<input type="text" name="uselessskill" value="useless skill" class="in-v3 text-center" ng-model="uselessSkill">
+			</div>
+			
+			<div class="col-md-4" ng-init="obnCelebrity='[obnoxious celebrity]'; number='[huge number]'; adjective='[adjective]'">
+				<input type="text" name="obncelebrity" value="obnoxious celebrity" class="in-v5 text-center" ng-model="obnCelebrity">
+				<input type="text" name="hugenumber" value="huge number" class="in-v3 text-center" ng-model="number">
+				<input type="text" name="adjective" value="adjective" class="in-v1 text-center" ng-model="adjective">
+				</div>
+		</div>
+	</div>
+	
+	<!-- Text Output -->
+
+	<div class="row">
+
+		<div class="col-md-offset-2 col-md-7 text">
+
+			<h4>{{femaleName}} was a {{jobTitle}} who loved technology. Although she loved parts of her job, she absolutely hated {{tedTask}} and {{dirTask}}. So, {{femaleName}} met with her life mentor {{celebrity}} who told her to learn how to {{uselessSkill}} with Thinkful. Thinkful didn't offer a course on {{uselessSkill}} so she studied programming instead. 
+			</h4>
+
+			<h4>
+			What a great decision! With her new skills, {{femaleName}} built a(n) {{adjective}} robot named {{obnCelebrity}} that not only loved {{dirTask}} but did it {{number}} faster. 
+			</h4>
+
+		</div>
+
+	</div>
+
+</div>
+	
+</body>
+
+</html>
